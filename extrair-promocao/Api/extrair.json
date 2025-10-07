@@ -1,5 +1,7 @@
-export default async function handler(req, res) {
+// api/extrair.js
+module.exports = async (req, res) => {
   const { url } = req.query;
+
   // Exemplo de JSON de promoção
   const exemploJson = {
     img: "https://http2.mlstatic.com/D_NQ_NP_868300-MLB76811020498_062024-O-patinete-infantil-dobravel-3-rodas-base-scooter-ate-70-kg.webp",
@@ -10,5 +12,6 @@ export default async function handler(req, res) {
     cupom: "BRINCARPROMO",
     link: "https://promocoes.kibaratao.com.br/19q3"
   };
+
   res.status(200).json(exemploJson);
-}
+};
